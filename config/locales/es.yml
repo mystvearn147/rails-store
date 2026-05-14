@@ -4,3 +4,8 @@ es:
   products:
     index:
       title: "Productos"
+
+  store:
+    products:
+      index:
+        title: "Productos"
