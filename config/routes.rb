@@ -21,8 +21,11 @@ Rails.application.routes.draw do
     resource :wishlist, only: [ :create ], module: :products
   end
 
+  resources :wishlists do
+    resources :wishlist_products, only: [ :update, :destroy ], module: :wishlists
+  end
+
   resource :unsubscribe, only: [ :show ]
-  resources :wishlists
 
   namespace :settings do
     resource :email, only: [ :show, :update ]
