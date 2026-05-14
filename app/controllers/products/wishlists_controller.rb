@@ -18,6 +18,5 @@ class Products::WishlistsController < ApplicationController
       else
         @wishlist = Current.user.wishlists.create(name: "My Wishlist")
       end
-
     end
 end
