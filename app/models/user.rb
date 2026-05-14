@@ -3,6 +3,7 @@ class User < ApplicationRecord
   attr_readonly :admin
 
   has_many :sessions, dependent: :destroy
+  has_many :wishlists, dependent: :destroy
 
   normalizes :email_address, with: ->(e) { e.strip.downcase }
 
